@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive JavaScript Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('i.jpg');
+            background-size: 400px 400px;
+            background-repeat: repeat;
+            background-position: center;
+        }
+        .container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        h1 {
+            color: blue;
+        }
+         .name-instruction {
+            color: blue;
+        }
+        #output {
+            margin-top: 30px;
+            font-size: 60px;
+            font-weight: bold;
+            color: blue;
+            text-shadow: 1px 1px 1px rgba(6, 7, 8, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello everyone this is my homepage.</h1>
+        <p>Enter your name:</p>
+        <input type="text" id="nameInput">
+        <button onclick="displayMessage()">Submit</button>
+        
+        <div id="output"></div>
+        
+        <p>Change background color:</p>
+        <button onclick="changeColor('lightblue')">Light Blue</button>
+        <button onclick="changeColor('lightgreen')">Light Green</button>
+        <button onclick="changeColor('lightpink')">Light Pink</button>
+    </div>
+    
+    <script>
+        function displayMessage() {
+            const name = document.getElementById('nameInput').value;
+            const outputDiv = document.getElementById('output');
+            if (name) {
+                outputDiv.textContent = `Hello, ${name}!`;
+            } else {
+                outputDiv.textContent = 'Please enter your name.';
+            }
+        }
+
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
